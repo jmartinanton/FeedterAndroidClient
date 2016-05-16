@@ -11,22 +11,37 @@
     android:paddingTop="@dimen/entryfeed_listview_activity_feedtext_margin"
     tools:context="com.mar2.feedter.view.EntryItemView">
 
-    <ImageView
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:id="@+id/ImgEntry" />
-
-    <TextView android:id="@+id/LblTitle"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="Titular"
-        android:textSize="20sp" />
+        android:id="@+id/scrollView" >
 
-    <TextView android:id="@+id/LblDescription"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="normal"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis pharetra nisi at sodales. Maecenas lobortis a massa varius lobortis. Donec pretium sodales libero nec interdum. Morbi nulla leo, convallis quis lacus vitae, aliquam tristique nisl. Praesent augue eros, mollis."
-        android:textSize="12sp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView android:id="@+id/LblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Titular"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:id="@+id/ImgEntry" />
+
+            <TextView android:id="@+id/LblDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque facilisis pharetra nisi at sodales. Maecenas lobortis a massa varius lobortis. Donec pretium sodales libero nec interdum. Morbi nulla leo, convallis quis lacus vitae, aliquam tristique nisl. Praesent augue eros, mollis."
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
