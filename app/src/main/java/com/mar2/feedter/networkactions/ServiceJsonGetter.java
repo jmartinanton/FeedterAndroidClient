@@ -20,11 +20,8 @@ import java.util.concurrent.ExecutionException;
 /**
  * Created by jmart on 06/05/2016.
  */
-public class NetworkActions extends AsyncTask<String, Integer, String> {
+public class ServiceJsonGetter extends AsyncTask<String, Integer, String> {
 
-    private String filters = "";
-    private String user = "";
-    private String action;
     private String direcc;
 
     public String getDirecc() {
@@ -34,8 +31,6 @@ public class NetworkActions extends AsyncTask<String, Integer, String> {
     public void setDirecc(String direcc) {
         this.direcc = direcc;
     }
-
-
 
     @Override
     protected String doInBackground(String... params) {
@@ -82,8 +77,7 @@ public class NetworkActions extends AsyncTask<String, Integer, String> {
         }
         Log.i("INFO", response);
     }
-
-
+    
     private String inputStreamToString(InputStream in) throws IOException {
         BufferedReader r = new BufferedReader(new InputStreamReader(in));
         StringBuilder total = new StringBuilder();

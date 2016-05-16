@@ -11,18 +11,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name="com.mar2.feedter.view.EntryFeed">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.mar2.feedter.view.DrawerActivity"
             android:label="@string/title_activity_drawer"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.mar2.feedter.view.EntryItemView" />
-        <activity android:name="com.mar2.feedter.view.Login"></activity>
+        <activity android:name="com.mar2.feedter.view.Login" />
+        <activity android:name="com.mar2.feedter.view.FilterCreation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

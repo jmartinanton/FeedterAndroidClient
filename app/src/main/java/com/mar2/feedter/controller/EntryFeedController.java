@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import com.mar2.feedter.networkactions.NetworkActions;
+import com.mar2.feedter.networkactions.ServiceJsonGetter;
 
 /**
  * Created by jmart on 14/05/2016.
@@ -24,7 +24,7 @@ public class EntryFeedController {
     protected Context context;
     public EntriesSQLiteHelper entriesDbHelper;
     public SQLiteDatabase entriesDb;
-    public NetworkActions actions;
+    public ServiceJsonGetter actions;
 
     public EntryFeedController(Context context){
         this.context = context.getApplicationContext();
@@ -37,7 +37,7 @@ public class EntryFeedController {
         String url = "http://"+ip+":8080/ServiceComm/app/entries";
         String params = "?user=martin&action=get&filters=fasdfasdf&date=fasfsdfa";
         String respuesta="no ha pasado nada";
-        actions = new NetworkActions();
+        actions = new ServiceJsonGetter();
         actions.setDirecc(url+params);
         entriesList = getEntriesListFromRequest();
         entriesDbHelper = new EntriesSQLiteHelper(context, "DBEntries", null,1);

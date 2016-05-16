@@ -109,7 +109,7 @@ public class EntryObjectCreator {
 
         @Override
         protected void onCancelled() {
-/*            Toast.makeText(MainActivity.this, "Tarea cancelada!", Toast.LENGTH_SHORT).show();*/
+/*            Toast.makeText(, "Tarea cancelada!", Toast.LENGTH_SHORT).show();*/
         }
     }
 
